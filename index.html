@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tamastudi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="explanation js-explanation">
+      <h2>Comment jouer ?</h2>
+      <p>
+        Appuyer 5 fois sur le bouton du milieu (jaune) pour lancer la partie. <br>
+        Une fois le tama devenu adulte, des envies apparaîtront. <br>
+        Afin de maintenir votre tama en vie, répondez rapidement à son envie. <br> 
+        Pour se faire : sélectionner l'émoticone répondant à l'envie au-dessus du tama. <br>
+        Combien de temps maintiendrez-vous votre tama en vie ?
+      </p>
+    </div>
+    <div class="vitals hidden js-vitals">
+      <ul class="vitals__list">
+        <li class="vitals__item">
+          <p class="vitals__subtitle">Faim</p>
+          <p class="vitals__number js-score js-score--eat">0</p>
+          <p class="vitals__mention">/ 5</p>
+        </li>
+        <li class="vitals__item">
+          <p class="vitals__subtitle">Envie de jouer</p>
+          <p class="vitals__number js-score js-score--play">0</p>
+          <p class="vitals__mention">/ 5</p>
+        </li>
+        <li class="vitals__item">
+          <p class="vitals__subtitle">Propreté</p>
+          <p class="vitals__number js-score js-score--clean">0</p>
+          <p class="vitals__mention">/ 5</p>
+        </li>
+        <li class="vitals__item">
+          <p class="vitals__subtitle">Humeur</p>
+          <p class="vitals__number js-mood">0</p>
+          <p class="vitals__mention">/ 5</p>
+        </li>
+        <li class="vitals__item">
+          <p class="vitals__subtitle">Durée de vie en minutes</p>
+          <p class="vitals__number js-life-duration">0</p>
+          <p class="vitals__mention">de <span class="js-tamaName"></span></p>
+        </li>
+      </ul>
+    </div>
+    <div class="tamastudi">
+      <div class="tamastudi__container">
+        <h1 class="tamastudi__title">
+          Mon <br />
+          Tamastudi&nbsp;!
+        </h1>
+        <div class="tamastudi__screen">
+          <ul class="tamastudi__container-actions js-actions hidden">
+            <li class="tamastudi__actions js-button-action" data-desire="eat">🍖</li>
+            <li class="tamastudi__actions js-button-action" data-desire="play">🎳</li>
+            <li class="tamastudi__actions js-button-action" data-desire="clean">🚽</li>
+          </ul>
+          <div class="tamastudi__desire js-desire"></div>
+          <div class="tamastudi__character js-character">🥚</div>
+        </div>
+        <div class="tamastudi__container-buttons">
+          <button
+            class="tamastudi__button js-button"
+            data-direction="left"
+          ></button>
+          <button
+            class="tamastudi__button js-button button-center"
+            data-direction="center"
+          ></button>
+          <button
+            class="tamastudi__button js-button"
+            data-direction="right"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
